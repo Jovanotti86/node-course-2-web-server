@@ -58,6 +58,13 @@ app.get('/bad', (request, response) => {
         errorMessage: 'Unable to do'
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('project.hbs', {
+        title: 'About the projects',
+        webSiteTitle: 'udemy',
+    })
+})
 // endregion
 
 app.listen(PORT);
