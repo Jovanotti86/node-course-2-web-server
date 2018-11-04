@@ -7,6 +7,7 @@ var app = express();
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
+const PORT = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
     var now = new Date().toString();
@@ -59,4 +60,4 @@ app.get('/bad', (request, response) => {
 });
 // endregion
 
-app.listen(3000);
+app.listen(PORT);
